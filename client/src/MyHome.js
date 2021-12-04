@@ -8,7 +8,6 @@ import { getPosts } from './actions/posts';
 import useStyles from './styles';
 import memories from './images/memories.png';
 import ResponsiveAppBar from './components/NavigationBar/ResponsiveAppBar';
-import {Link} from 'react-router-dom'
 
 const Home = () => {
   const [currentId, setCurrentId] = useState(0);
@@ -25,12 +24,20 @@ const Home = () => {
       <ResponsiveAppBar/>
       <Grow in>
         <Container style={{"margin-top": "150px"}}>
-          <Grid container justify="space-between" alignItems="stretch" spacing={3}>
-            <Grid item xs={12} sm={7}>
+          <Grid direction='row' container spacing={4}justify="space-between">
+          
+            <Grid container item sm={6}>
+            <Typography variant="h3" component="div" gutterBottom style={{"color":"white"}}>
+                My Petition
+            </Typography>
               <Posts setCurrentId={setCurrentId} />
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <Form currentId={currentId} setCurrentId={setCurrentId} />
+            
+            <Grid container item sm={6}>
+            <Typography variant="h3" component="div" gutterBottom style={{"color":"white"}}>
+                My Vote
+            </Typography>
+                <Posts setCurrentId={setCurrentId} />
             </Grid>
           </Grid>
         </Container>
