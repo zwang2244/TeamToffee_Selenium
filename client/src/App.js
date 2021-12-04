@@ -2,12 +2,12 @@ import React, { Component } from "react";
 // import './App.css';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HomePage from "./Home";
+import HomePage from "./components/Home/Home";
 import DescriptionPage from "./Description";
 import SignUpPage from "./components/SignUp/Signup";
 import SignInPage from "./components/SignUp/Signin";
 import AboutPage from "./components/About/landing";
-import MyHome from './MyHome'
+import MyHome from './components/UserProfile/MyHome'
 import AddPetition from './AddPetition'
 
 class App extends Component {
