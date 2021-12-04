@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {AppBar, IconButton, Typography, Menu, Avatar, Button, Tooltip, MenuItem} from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 import "./ResponsiveAppBar.css";
 const pages = ['About', 'Home'];
 const settings = ['My Home', 'Log In', 'Sign Out'];
@@ -8,7 +9,13 @@ const ResponsiveAppBar = () => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-  
+
+    const history = useHistory();
+    const routeChangetoHome = () => {
+      let path = "/";
+      history.push(path);
+    }
+
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
@@ -37,17 +44,21 @@ const ResponsiveAppBar = () => {
                 PetitionRate
               </Typography>
             </div>
-            {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
                 variant="contained"
                 color = "primary"
                 className = "nav_btn"
               >
-                {page}
+                About
               </Button>
-            ))}
+              <Button
+                variant="contained"
+                color = "primary"
+                className = "nav_btn"
+                onClick={routeChangetoHome}
+              >
+                Home
+              </Button>
           </div>
 
           <Tooltip title="Open Profile" >
