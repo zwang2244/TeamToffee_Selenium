@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 import HomePage from './Home';
 import DescriptionPage from './Description'
+import MyHome from './MyHome'
+import AddPetition from './AddPetition'
+
 class App extends Component {
     render() {
         return(
@@ -17,6 +20,11 @@ class App extends Component {
                     component={HomePage}/>
                     <Route exact path="/description" 
                     component={DescriptionPage}/>
+                    <Route exact path="/home"
+                    component={MyHome}/>
+                    <Route exact path="/add"
+                    component={AddPetition}/>
+
                 </Switch>
             </Router>
         );
