@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    height: "50vh",
     fontFamily: "Nunito",
   },
   appbar: {
@@ -46,8 +46,7 @@ export default function Landing() {
     <div>
       <ResponsiveAppBar></ResponsiveAppBar>
       <div className={classes.root} id="header">
-        <AppBar className={classes.appbar} elevation={0}>
-        </AppBar>
+        <AppBar className={classes.appbar} elevation={0}></AppBar>
 
         <div className={classes.container}>
           <h1 className={classes.title}>

@@ -10,11 +10,16 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import ResponsiveAppBar from "./../NavigationBar/ResponsiveAppBar";
+  import { useHistory } from "react-router-dom";
 
 // /components/NavigationBar/ResponsiveAppBar";
 
 
 export default function SignIn() {
+
+  const history = useHistory();
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -25,67 +30,80 @@ export default function SignIn() {
     });
   };
 
+  const routeChangeToSignUp = () => {
+    history.push("/signup");
+  };
+
   return (
     // <ThemeProvider theme={theme}>
-	<div>
-	<ResponsiveAppBar></ResponsiveAppBar>
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <Box
-        sx={{
-          marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+    <div>
+      <ResponsiveAppBar></ResponsiveAppBar>
+      <Container
+        component="main"
+        maxWidth="xs"
+        style={{ "margin-top": "150px" }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
           >
-            Sign In
-          </Button>
-          <Grid container>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign In
+            </Button>
+            <Grid container>
+              <Grid item>
+                <Link href="#" variant="body2" onClick={routeChangeToSignUp}>
+                  {"Don't have an account? Sign Up"}
+                </Link>
+              </Grid>
             </Grid>
-          </Grid>
+          </Box>
         </Box>
-      </Box>
-    </Container>
-	</div>
+      </Container>
+    </div>
   );
 }

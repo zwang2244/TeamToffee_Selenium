@@ -4,7 +4,6 @@ import ImageCard from "./ImageCard";
 import description from "./description";
 const useStyles = makeStyles((theme) => ({
 	root: {
-		minHeight: "100vh",
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",

@@ -21,10 +21,13 @@ export default function SignUp() {
   };
 
   return (
-    // <ThemeProvider theme={theme}>
     <div>
       <ResponsiveAppBar></ResponsiveAppBar>
-      <Container component="main" maxWidth="xs">
+      <Container
+        component="main"
+        maxWidth="xs"
+        style={{ "margin-top": "150px" }}
+      >
         <CssBaseline />
         <Box
           sx={{
