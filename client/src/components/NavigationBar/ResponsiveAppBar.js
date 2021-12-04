@@ -2,8 +2,6 @@ import * as React from 'react';
 import {AppBar, IconButton, Typography, Menu, Avatar, Button, Tooltip, MenuItem} from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import "./ResponsiveAppBar.css";
-const pages = ['About', 'Home'];
-const settings = ['My Home', 'Log In', 'Sign Out'];
 
 const ResponsiveAppBar = () => {
 
@@ -13,6 +11,11 @@ const ResponsiveAppBar = () => {
     const history = useHistory();
     const routeChangetoHome = () => {
       let path = "/";
+      history.push(path);
+    }
+
+    const routeChangetoMyHome = () => {
+      let path = "/myhome";
       history.push(path);
     }
 
@@ -84,11 +87,15 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem key="My Home" onClick={routeChangetoMyHome}>
+                <Typography textAlign="center">My Home</Typography>
+              </MenuItem>
+              <MenuItem key="Log In" onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">Log In</Typography>
+              </MenuItem>
+              <MenuItem key="Sign Out" onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">Sign Out</Typography>
+              </MenuItem>
           </Menu>
         </div>
       </AppBar>
