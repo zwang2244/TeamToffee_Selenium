@@ -6,14 +6,6 @@ const pages = ['About', 'Home'];
 const settings = ['My Home', 'Log In', 'Sign Out'];
 
 const ResponsiveAppBar = () => {
-    const colortheme = createMuiTheme({
-      palette: {
-        primary: { main: "#1565c0", contrastText: "#fff" },
-        secondary: { main: "#03a9f4", contrastText: "#fff" }
-      }
-    });
-
-
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -36,7 +28,8 @@ const ResponsiveAppBar = () => {
     return (
       <div style={{ width: '100%' }}>
       <AppBar position="fixed">
-        <Container style={{ width: '100%' }}>
+        <Container
+          >
           <Toolbar disableGutters>
             <Typography
               variant="h5"
@@ -48,8 +41,8 @@ const ResponsiveAppBar = () => {
             display: 'inline-flex',
             flexDirection: 'row',
             justifyContent: 'space-between' 
-            }} >
-            <MuiThemeProvider theme={colortheme}>
+            }} m={2} >
+            
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -60,7 +53,6 @@ const ResponsiveAppBar = () => {
                   {page}
                 </Button>
               ))}
-            </MuiThemeProvider>
             
               <Tooltip title="Open Profile" >
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}  >
