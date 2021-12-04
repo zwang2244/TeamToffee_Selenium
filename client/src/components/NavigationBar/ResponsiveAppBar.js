@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem} from '@material-ui/core';
+import {AppBar, IconButton, Typography, Menu, Avatar, Button, Tooltip, MenuItem} from '@material-ui/core';
 import "./ResponsiveAppBar.css";
 const pages = ['About', 'Home'];
 const settings = ['My Home', 'Log In', 'Sign Out'];
