@@ -1,17 +1,24 @@
-import { makeStyles } from '@material-ui/core/styles';
+"use strict";
 
-export default makeStyles({
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _styles = require("@material-ui/core/styles");
+
+var _default = (0, _styles.makeStyles)({
   media: {
     height: 0,
     paddingTop: '56.25%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backgroundBlendMode: 'darken',
+    backgroundBlendMode: 'darken'
   },
   border: {
-    border: 'solid',
+    border: 'solid'
   },
   fullHeightCard: {
-    height: '100%',
+    height: '100%'
   },
   card: {
     display: 'flex',
@@ -19,34 +26,36 @@ export default makeStyles({
     justifyContent: 'space-between',
     borderRadius: '15px',
     height: '100%',
-    position: 'relative',
+    position: 'relative'
   },
   overlay: {
     position: 'absolute',
     top: '20px',
     left: '20px',
-    color: 'white',
+    color: 'white'
   },
   overlay2: {
     position: 'absolute',
     top: '20px',
     right: '20px',
-    color: 'white',
+    color: 'white'
   },
   grid: {
-    display: 'flex',
+    display: 'flex'
   },
   details: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '20px',
+    margin: '20px'
   },
   title: {
-    padding: '0 16px',
+    padding: '0 16px'
   },
   cardActions: {
     padding: '0 16px 8px 16px',
     display: 'flex',
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between'
+  }
 });
+
+exports.default = _default;

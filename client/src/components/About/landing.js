@@ -1,64 +1,72 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { AppBar } from "@material-ui/core";
+"use strict";
 
-import Introduction from "./Introduction";
-import ResponsiveAppBar from "./../NavigationBar/ResponsiveAppBar";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Landing;
 
-const useStyles = makeStyles(() => ({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "50vh",
-    fontFamily: "Nunito",
-  },
-  appbar: {
-    background: "none",
-  },
-  appbarWrapper: {
-    width: "80%",
-    margin: "0 auto",
-  },
-  appbarTitle: {
-    flexGrow: "1",
-  },
-  icon: {
-    color: "#fff",
-    fontSize: "2rem",
-  },
-  colorText: {
-    color: "#5AFF3D",
-    fontSize: "1rem",
-  },
-  container: {
-    textAlign: "center",
-  },
-  title: {
-    color: "#fff",
-    fontSize: "4.5rem",
-  },
-}));
-export default function Landing() {
-  const classes = useStyles();
+var _react = _interopRequireDefault(require("react"));
 
-  return (
-    <div>
-      <ResponsiveAppBar></ResponsiveAppBar>
-      <div className={classes.root} id="header">
-        <AppBar className={classes.appbar} elevation={0}></AppBar>
+var _styles = require("@material-ui/core/styles");
 
-        <div className={classes.container}>
-          <h1 className={classes.title}>
-            Welcome to <br />
-            Petition App
-            <span className={classes.colorText}>
-              &nbsp;&nbsp;Made by Toffee
-            </span>
-          </h1>
-        </div>
-      </div>
-      <Introduction />
-    </div>
-  );
+var _core = require("@material-ui/core");
+
+var _Introduction = _interopRequireDefault(require("./Introduction"));
+
+var _ResponsiveAppBar = _interopRequireDefault(require("./../NavigationBar/ResponsiveAppBar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _styles.makeStyles)(function () {
+  return {
+    root: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "50vh",
+      fontFamily: "Nunito"
+    },
+    appbar: {
+      background: "none"
+    },
+    appbarWrapper: {
+      width: "80%",
+      margin: "0 auto"
+    },
+    appbarTitle: {
+      flexGrow: "1"
+    },
+    icon: {
+      color: "#fff",
+      fontSize: "2rem"
+    },
+    colorText: {
+      color: "#5AFF3D",
+      fontSize: "1rem"
+    },
+    container: {
+      textAlign: "center"
+    },
+    title: {
+      color: "#fff",
+      fontSize: "4.5rem"
+    }
+  };
+});
+
+function Landing() {
+  var classes = useStyles();
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_ResponsiveAppBar.default, null), /*#__PURE__*/_react.default.createElement("div", {
+    className: classes.root,
+    id: "header"
+  }, /*#__PURE__*/_react.default.createElement(_core.AppBar, {
+    className: classes.appbar,
+    elevation: 0
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: classes.container
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: classes.title
+  }, "Welcome to ", /*#__PURE__*/_react.default.createElement("br", null), "Petition App", /*#__PURE__*/_react.default.createElement("span", {
+    className: classes.colorText
+  }, "\xA0\xA0Made by Toffee")))), /*#__PURE__*/_react.default.createElement(_Introduction.default, null));
 }

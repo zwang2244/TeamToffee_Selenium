@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import "./ResponsiveAppBar.css";
+import { CoverageSummary } from 'istanbul-coverage-display';
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -51,6 +52,7 @@ const ResponsiveAppBar = () => {
   return (
     <div>
       <AppBar position="fixed">
+        <CoverageSummary />
         <div className="nav_bar">
           <div className="nav_left">
             <div className="nav_title">

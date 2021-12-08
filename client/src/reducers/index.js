@@ -1,5 +1,17 @@
-import { combineReducers } from 'redux';
+"use strict";
 
-import posts from './posts';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.reducers = void 0;
 
-export const reducers = combineReducers({ posts });
+var _redux = require("redux");
+
+var _posts = _interopRequireDefault(require("./posts"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var reducers = (0, _redux.combineReducers)({
+  posts: _posts.default
+});
+exports.reducers = reducers;

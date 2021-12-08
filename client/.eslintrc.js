@@ -21,6 +21,7 @@ module.exports = {
     "parser": "babel-eslint",
     plugins: [
       'react',
+      'istanbul'
     ],
     rules: {
       "import/extensions": 0,
